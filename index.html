@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio - byteX</title>
+  <style>
+    @font-face {
+      font-family: 'Oxide';
+      src: url('fonts/oxide.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: 'CalculatorFont';
+      src: url('fonts/calculator.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      background-color: black;
+      color: white;
+    }
+
+    .profile-picture {
+      width: 450px;
+      height: 450px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 20px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-right: 25px;
+    }
+
+    .calculator-number {
+      font-family: 'CalculatorFont', sans-serif;
+      font-size: 72px;
+      color: #FFFFFF;
+      text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+    }
+
+    .name {
+      font-family: 'Oxide', sans-serif;
+      font-size: 41px;
+      text-align: center;
+    }
+
+    .about-me {
+      margin-top: 40px;
+      width: 80%;
+      display: flex;
+      /* Use flexbox to arrange items */
+      flex-direction: row;
+      /* Align items horizontally */
+      align-items: flex-start;
+      justify-content: space-between;
+    }
+
+    .about-me-content {
+      flex: 1;
+      /* Allow the text to grow to fill available space */
+      margin-right: 20px;
+      /* Add some space between text and image */
+    }
+
+    .about-me h2 {
+      font-family: 'Oxide', sans-serif;
+      font-size: 28px;
+      text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+      margin: 0;
+      padding: 0;
+      margin-left: 170px;
+    }
+
+    .about-me p {
+      font-family: 'Oxide', sans-serif;
+      font-size: 15px;
+      text-align: left;
+      margin: 0;
+      padding: 0;
+      max-width: 60%;
+      margin-left: 170px;
+    }
+
+    .down-arrow {
+      margin-top: 20px;
+      width: 50px;
+      height: 50px;
+    }
+
+    .about-me-image {
+      width: 200px;
+      /* Adjust the size as needed */
+      height: 200px;
+      /* Adjust the size as needed */
+      object-fit: cover;
+      border-radius: 10px;
+      margin-right: 300px;
+    }
+
+    .github {
+      margin-top: 40px;
+    }
+  </style>
+</head>
+
+<body>
+  <img class="profile-picture"
+    src="https://cdn.discordapp.com/attachments/1138884222212386857/1140609281369055252/pfp.jpg" alt="Profile Picture">
+  <h1 class="name">ByteX</h1>
+  <span class="calculator-number">15</span>
+  <img class="down-arrow" src="assets/arrow.gif" alt="Down Arrow">
+
+  <div class="about-me">
+    <div class="about-me-content">
+      <h2>About Me</h2>
+      <p>
+        Fullstack website developer fleunt in c++, python, assembaly and an understanding in utilizing reversing
+        engineering software such as x64dbg and IDA pro. currently working on anti-cheat analysis and kernel mode
+        development using windows API. Also known for making kernel hardware masking and front end console applications.
+      </p>
+    </div>
+    <img class="about-me-image" src="assets/html.png" alt="About Me Image">
+  </div>
+  <a class="github" href="https://github.com/Byte-1337">
+    <img src="assets/github.png" alt="GitHub Icon" width="50" height="50">
+  </a>
+</body>
+
+</html>
