@@ -35,6 +35,7 @@
       color: white;
     }
 
+
     .profile-picture {
       width: 450px;
       height: 450px;
@@ -116,6 +117,10 @@
       margin-top: 40px;
     }
 
+    .main {
+      z-index: 10000;
+    }
+
     .loading-screen {
       position: fixed;
       top: 0;
@@ -153,17 +158,25 @@
       // Simulate loading time
       setTimeout(function () {
         // Hide loading animation
-        document.querySelector(".loading-screen").style.opacity = 0;
+        var loadingScreen = document.querySelector(".loading-screen");
+        loadingScreen.style.opacity = 0;
+
+
+        setTimeout(function () {
+          loadingScreen.remove();
+        }, 820);
 
         // Show main content
-        document.querySelector(".main-content").style.opacity = 1;
+        var mainContent = document.querySelector(".main");
+        mainContent.style.opacity = 1;
 
         // Trigger the image flipping effect
         setTimeout(function () {
-          document.querySelector(".loading-content").style.transform = "rotateY(180deg)";
+          var loadingContent = document.querySelector(".loading-content");
         }, 300); // Adjust the delay as needed
       }, 2000); // Adjust the loading time as needed
     });
+
   </script>
 
   <div class="loading-content">
@@ -173,7 +186,7 @@
 </div>
 
 
-<body>
+<body class="main">
   <img class="profile-picture"
     src="https://cdn.discordapp.com/attachments/1138884222212386857/1140609281369055252/pfp.jpg" alt="Profile Picture">
   <h1 class="name">ByteX</h1>
@@ -191,7 +204,7 @@
     </div>
     <img class="about-me-image" src="assets/html.png" alt="About Me Image">
   </div>
-  <a class="github" href="https://github.com/Byte-1337">
+  <a class="github" href="https://google.com">
     <img src="assets/github.png" alt="GitHub Icon" width="50" height="50">
   </a>
 </body>
